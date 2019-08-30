@@ -18,10 +18,6 @@ export class WebComponent implements OnInit {
     private route: ActivatedRoute,
     private productService: ProductService
   ) {
-    // this.emitterService.data.subscribe(success => {
-    //   this.myCount = <any>success;
-    //   console.log('MyCount:' + this.myCount);
-    // });
 
     this.router.events.subscribe(success => {
       const val = success['url'];
