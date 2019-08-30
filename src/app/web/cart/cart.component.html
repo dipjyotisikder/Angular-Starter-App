@@ -1,0 +1,64 @@
+<!--==========================
+      Pricing Section
+    ============================-->
+<section id="pricing" class="wow fadeInUp section-bg">
+  <div class="container">
+    <header class="section-header">
+      <h3>Cart</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+      <p>Total Price: {{totalPrice}}</p>
+    </header>
+
+    <div class="row flex-items-xs-middle flex-items-xs-center">
+      <!-- Basic Plan  -->
+      <div class="col-xs-12 col-md-3" *ngFor="let product of products">
+        <div class="card">
+          <div class="card-header">
+            <span>
+              <!-- <img class="img-fluid" src="https://homepages.cae.wisc.edu/~ece533/images/peppers.png" /> -->
+            </span>
+            <h3>
+              <span class="currency">TK</span>{{product.product.price}}
+              <!-- <span class="period">/month</span> -->
+            </h3>
+          </div>
+          <div class="card-block">
+            <h4 class="card-title">
+              {{product.product.name}}
+            </h4>
+            <ul class="list-group">
+              <li class="list-group-item">Quantity: {{product.quantity}}</li>
+            </ul>
+            <a class="btn btn-danger" (click)="delete(product.product)">Delete</a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Regular Plan  -->
+      <!-- <div class="col-xs-12 col-md-3">
+        <div class="card">
+          <div class="card-header">
+            <h3><span class="currency">$</span>29<span class="period">/month</span></h3>
+          </div>
+          <div class="card-block">
+            <h4 class="card-title">
+              Regular Plan
+            </h4>
+            <ul class="list-group">
+              <li class="list-group-item">Odio animi voluptates</li>
+              <li class="list-group-item">Inventore quisquam et</li>
+              <li class="list-group-item">Et perspiciatis suscipit</li>
+              <li class="list-group-item">24/7 Support System</li>
+            </ul>
+            <a href="#" class="btn">Choose Plan</a>
+          </div>
+        </div>
+      </div> -->
+
+
+    </div>
+  </div>
+</section>
+<!-- #pricing -->
