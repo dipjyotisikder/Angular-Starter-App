@@ -1,7 +1,5 @@
 import { CartService } from 'src/services/cart.service';
-import { CartItem } from './../../models/cart/cart-item';
 import { BroadcastService, BRODCAST_KEYS } from './../../../services/broadcast.service';
-import { EmitterService } from './../../../services/emitter.service';
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/services/product.service';
 
@@ -14,14 +12,11 @@ export class ProductComponent implements OnInit {
 
   products: any;
 
-  constructor(private emitterService: EmitterService,
+  constructor(
     private broadcastService: BroadcastService,
     private productService: ProductService,
     private cartService: CartService,
   ) {
-    this.emitterService.data.subscribe(success => {
-      console.log('MyCount');
-    });
   }
 
   ngOnInit() {

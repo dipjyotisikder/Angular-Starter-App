@@ -16,7 +16,6 @@ export class WebComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private emitterService: EmitterService,
     private productService: ProductService
   ) {
     // this.emitterService.data.subscribe(success => {

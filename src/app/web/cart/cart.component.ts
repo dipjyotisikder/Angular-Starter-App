@@ -14,14 +14,11 @@ export class CartComponent implements OnInit {
   products: any;
   totalPrice: number;
 
-  constructor(private emitterService: EmitterService,
+  constructor(
     private broadcastService: BroadcastService,
     private productService: ProductService,
     private cartService: CartService,
   ) {
-    this.emitterService.data.subscribe(success => {
-      console.log('MyCount');
-    });
   }
 
   ngOnInit() {
