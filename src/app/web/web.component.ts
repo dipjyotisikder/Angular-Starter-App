@@ -1,5 +1,4 @@
 import { ProductService } from 'src/services/product.service';
-import { EmitterService } from './../../services/emitter.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
